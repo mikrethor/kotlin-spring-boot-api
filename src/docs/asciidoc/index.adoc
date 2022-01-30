@@ -1,0 +1,167 @@
+= Réaliser une API avec Kotlin et Spring Boot
+Xavier Bouclet
+v0.1, 2022-02-22: first version
+:example-caption!:
+ifndef::imagesdir[:imagesdir: images]
+ifndef::sourcedir[:sourcedir: ../../main/java]
+
+[NOTE.speaker]
+--
+Hello everyone. Thanks for joining me for this session.
+I hope that you will learn some tips today that will help you.
+--
+
+== About Me
+
+[%step]
+- Développeur Java/Kotlin
+- Montréal Jug and Devoxx4kids co-organiser
+- https://xavierbouclet.com/[https://xavierbouclet.com]
+- @XavierBouclet
+
+== La Fabrique Digit'Owl
+
+La Fabrique Digit'Owl image:digitowl-qr-code.png[Anatowl,width=15%] cherche des développeurs :
+
+- backend
+- frontend
+- mobile
+
+=== The Hard Life of a Techlead
+
+image::cover.png[width=25%]
+
+https://www.amazon.ca/-/fr/Xavier-Bouclet/e/B08RQKPM15/[The Hard Life of a Techlead]
+
+== History
+
+[cols=3*,grid=rows,frame=none]
+|===
+
+|Project Kotlin
+|-
+|July 2011
+
+|Spring Boot
+|1.0
+|April 2014
+
+|Kotlin
+|1.0
+|February 2016
+
+|Android Studio
+|3.0
+|October 2017
+
+|Spring Boot
+|2.0.0.RELEASE
+|March 2018
+|===
+
+== Why Kotlin over Java with Spring Boot
+
+=== No billion dollar mistake - Null Safety
+
+* String != String?
+
+=== Less code - Data class
+
+[source, kotlin]
+----
+import org.springframework.data.annotation.Id
+import java.util.*
+
+data class Message(@Id val id: UUID?=null,
+                       val message: String="")
+----
+
+Moins vrai si vous utilisez Java 14 : record
+
+=== Less code - Function
+
+[source, kotlin]
+----
+fun routes(javaHandler: JavaHandler) = router {
+    GET("/hello", javaHandler::aJavaBean)
+}
+----
+
+=== Immutability, Type inference
+
+[source, kotlin]
+----
+val numbers=listOf(1,2,3)
+
+var numbers=mutableListOf(1,2,3)
+----
+
+=== Other
+
+* "when" expression
+* Named parameters
+* Default value
+* ...
+
+=== Spring Boot use Kotlin extension function
+
+[source, kotlin]
+----
+import org.springframework.boot.autoconfigure.SpringBootApplication
+import org.springframework.boot.runApplication
+
+@SpringBootApplication
+class DemoApplication
+
+fun main(args: Array<String>) {
+    runApplication<DemoApplication>(*args)
+}
+----
+
+== Goal
+
+* Gradle DSL
+* Coroutines
+* Kofu
+* Tests tips
+
+== Let's code
+
+* Group : com.xavierbouclet
+* Artifact : kotlin-reactive
+* Project : Gradle Project
+* Language : Kotlin, Java : 17
+* Dependencies :
+** Spring Reactive Web
+** Spring Data R2DBC
+
+== Wrap up
+
+- No technical risk to use Kotlin over Java with Spring Boot
+- No need to use Kofu, you can use all the annotation you are use to
+- Can be done file by file
+- Be careful to the human factor
+
+== Going further
+:icons: font
+
+=== Books
+[bibliography]
+- https://pragprog.com/titles/vskotlin/programming-kotlin/[Programming Kotlin by Venkat Subramaniam, The Pragmatic Bookshelf. 1986. ISBN: 978-1-680506-35-8]
+
+=== Websites
+[bibliography]
+- https://spring.io/blog/2019/04/12/going-reactive-with-spring-coroutines-and-kotlin-flow[Going Reactive with Spring, Coroutines and Kotlin Flow]
+- https://medium.com/digitalfrontiers/reactive-or-coroutines-between-a-rock-and-a-hard-place-6a41a151195a[Reactive or Coroutines: Between a rock and a hard place?]
+- https://github.com/mikrethor/kotlin-reactive[Source code of the presentation]}
+
+=== This is the end !
+
+[.thumb]
+image::fin.png[question ?]
+
+
+
+
+
+
