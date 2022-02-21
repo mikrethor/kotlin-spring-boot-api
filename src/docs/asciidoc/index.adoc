@@ -53,7 +53,7 @@ https://www.amazon.ca/-/fr/Xavier-Bouclet/e/B08RQKPM15/[The Hard Life of a Techl
 |March 2018
 |===
 
-== Pourqupi Kotlin par rapport à Java avec Spring Boot
+== Pourquoi Kotlin par rapport à Java avec Spring Boot
 
 === No billion dollar mistake - Null Safety
 
@@ -97,7 +97,7 @@ var numbers=mutableListOf(1,2,3)
 * Default value
 * ...
 
-=== Spring Boot utilise extension function
+=== Spring Boot + Kotlin extension functions
 
 [source, kotlin]
 ----
@@ -151,7 +151,9 @@ fun main(args: Array<String>) {
 === C'est la fin !
 
 [.thumb]
-image::fin.png[question ?]
+image::fin.JPG[width=37%]
+
+https://twitter.com/antonarhipov/status/1495698272517828610[Credit]
 
 
 
