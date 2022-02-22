@@ -146,7 +146,7 @@ fun main(args: Array<String>) {
 [bibliography]
 - https://spring.io/blog/2019/04/12/going-reactive-with-spring-coroutines-and-kotlin-flow[Going Reactive with Spring, Coroutines and Kotlin Flow]
 - https://medium.com/digitalfrontiers/reactive-or-coroutines-between-a-rock-and-a-hard-place-6a41a151195a[Reactive or Coroutines: Between a rock and a hard place?]
-- https://github.com/mikrethor/kotlin-reactive[Source code of the presentation]}
+- https://github.com/mikrethor/kotlin-reactive[Source code of the presentation]
 
 === C'est la fin !
 
